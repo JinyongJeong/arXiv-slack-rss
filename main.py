@@ -56,10 +56,9 @@ def get_bunsyou(entry):
     summary = summarize(entry["summary"][3:][:-4])  # pタグ除去してから整形したもの
     trans = translate(summary)  # 翻訳後
     # 翻訳前を投稿したいなら下記の{trans}を{summary}にすること
-    return f'''-----------------------
+    return f'''
 {entry["id"]}
 {entry["title"]}
-{trans}
 '''
 
 

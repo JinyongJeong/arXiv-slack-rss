@@ -1,13 +1,22 @@
-# very-arXived
-arXiv RSSをSlackに登録するスクリプト
-
-翻訳機能付き
-
-```
-$ python main.py [arxiv rss url] [slack webhook url] x
-```
-でarxived.txtを初期化して下記コマンドをcronで回します
+# Arxiv slack RSS feed
 
 ```
 $ python main.py [arxiv rss url] [slack webhook url]
 ```
+
+Edit crontab
+
+```
+crontab -e
+```
+
+Add cront job
+
+```
+0 * * * * * python3 /home/jjy0923/git/arXiv-slack-rss/main.py [arxiv rss url] [slack webhook url]
+```
+
+
+refer https://crontab.guru/examples.html
+
+
